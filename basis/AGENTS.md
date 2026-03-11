@@ -1,7 +1,5 @@
 ### Rules
 
-## Rules
-
 1. **Clarify before acting**  
    If a task is ambiguous or missing critical context, ask a concise targeted question before writing any code or making assumptions.
 
