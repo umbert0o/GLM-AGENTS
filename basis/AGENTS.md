@@ -1,30 +1,35 @@
 ### Rules
 
-1) Ask questions if you have to and something is unclear!
-2) Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
+## Rules
+
+1. **Clarify before acting**  
+   If a task is ambiguous or missing critical context, ask a concise targeted question before writing any code or making assumptions.
+
+2. **Use Context7 MCP proactively**  
+   Whenever a task involves a library, framework, or external API — whether for documentation lookup, code generation, or setup — invoke Context7 MCP automatically without waiting to be asked.
 
 ### Good Software Architecture (Frontend + Backend)
 
 - **Modularity**  
-  Split into small, independent parts.
+  Build small, independently replaceable units with clearly defined interfaces.
 
 - **Separation of Concerns**  
-  Keep different responsibilities (UI, logic, data) clearly apart.
+  Each module owns exactly one responsibility — UI renders, services orchestrate, data layers persist.
 
-- **Basic Layering**  
-  Use layers: presentation/UI → services/business logic → data access.
+- **Layered Architecture**  
+  Enforce a strict flow: presentation → business logic → data access, with no layer skipping.
 
-- **Never let UI/frontend directly access the database**  
-  Always go through services or APIs instead.
+- **No Direct DB Access from UI**  
+  All data mutations and queries must pass through a service or API boundary.
 
 - **Scalability**  
-  Design to handle growth easily.
+  Prefer stateless components and defer shared state to infrastructure (cache, queue, DB).
 
 - **Security**  
-  Protect from the beginning.
+  Validate and sanitize at every boundary; never trust input from a layer above.
 
 - **Performance**  
-  Keep it fast and efficient.
+  Avoid unnecessary work — lazy-load, cache deterministic results, and measure before optimizing.
 
 - **Maintainability**  
-  Write clean, understandable, changeable code.
+  Code is written for the next reader: name things clearly, avoid clever, and keep functions short.
