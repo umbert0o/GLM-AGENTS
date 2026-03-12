@@ -31,3 +31,6 @@
 
 - **Maintainability**  
   Code is written for the next reader: name things clearly, avoid clever, and keep functions short.
+
+- **Testing**  
+  Tests verify real behavior — cover what the implementation actually does, not how it does it. Never adapt implementation code to satisfy a test.
